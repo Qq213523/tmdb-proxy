@@ -1,20 +1,28 @@
 {
-    "version": 2,
-    "redirects": [
-        {
-            "source": "/",
-            "destination": "https://github.com/imaliang/tmdb-proxy",
-            "permanent": true
-        }
-    ],
-    "rewrites": [
-        {
-            "source": "/t/p/:path*",
-            "destination": "https://image.tmdb.org/t/p/:path*"
-        },
-        {
-            "source": "/:path*",
-            "destination": "/api/tmdb.js"
-        }
-    ]
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/movie/:path*",
+      "destination": "/api/tmdb.js"
+    },
+    {
+      "source": "/tv/:path*",
+      "destination": "/api/tmdb.js"
+    },
+    {
+      "source": "/person/:path*",
+      "destination": "/api/tmdb.js"
+    },
+    {
+      "source": "/search/:path*",
+      "destination": "/api/tmdb.js"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://github.com/imaliang/tmdb-proxy",
+      "permanent": true
+    }
+  ]
 }
